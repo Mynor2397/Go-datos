@@ -1,0 +1,61 @@
+{{ define "Index" }}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Castrillo Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./styles.css">
+   
+    <script src="main.js"></script>
+</head>
+<body class="fondo">
+    <header>
+       <div class="wrapper">
+        <div class="logo">
+            CASTRILLO SERVICE
+        </div>
+        <nav>
+           <!-- <a  href="/prestamosclientes">PRESTAMO</a>-->
+           <!-- <a href="/">CLIENTES</a>--> 
+           <!-- <a href="/prestamo">TIPOS DE PRESTAMOS</a>-->
+            <a href="/index">INICIO</a>
+            <a href="/new">NUEVO PRESTAMO</a>
+        
+       </div>
+    </header>
+    <section class="contenido">
+    </section>
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <div class="cold-md-10">
+        <table class="table table-striped">
+                 <thead class="thead-dark">
+                    <tr>
+                        <th scope="row">ID</td>
+                        <th scope="row">NAME</td>
+                        <th scope="row">LOCATION</td>
+                        <th scope="row">ACCIONES</th>
+                    </tr>
+                  </thead>
+        <tbody>
+            {{ range . }}
+              <tr>            
+                <td class="table-success">{{.Id }}</td>
+                <td class="table-primary">{{.Name }}</td>
+                <td class="table-success">{{.Location }}</td>
+                 <td class="table-success">
+                  <a href="/edit?id={{ .Id }}" class="btn btn-info">Edit</a>                
+                  <a href="/delete?id={{ .Id}}" class="btn btn-danger">Delete</a>
+                </td>
+              </tr>
+            {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+ {{ template "Footer" }}
+{{ end }}

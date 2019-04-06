@@ -1,0 +1,48 @@
+{{ define "login" }}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Castrillo Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./styles.css">
+   
+    <script src="main.js"></script>
+</head>
+<body class="fondo">
+    <header>
+       <div class="wrapper">
+        <div class="logo">
+            CASTRILLO SERVICE
+        </div>
+        <nav>
+            <a href="/login">INICIA SESIÓN</a>
+            <a href="/signup">REGISTRATE</a>
+        
+       </div>
+    </header>
+<div class="container mt-5">
+<div class="row">
+  <div class="col-md-5 offset-md-3 card">
+    <div class="card-body">
+        <body>
+            <form method="POST" action="/login">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="password" class="form-control">
+            </div>
+                 <button type="submit" value="Save user" class="btn btn.primary btn btn-success"> INICIAR SE</button>
+            </form>
+        </body>
+   </div>
+  </div>       
+</div>
+</div>  
+</div>
+</html>
+{{end}}
