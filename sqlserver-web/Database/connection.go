@@ -1,5 +1,4 @@
 package Database
-
 import (
 	"database/sql"
 	"fmt"
@@ -10,11 +9,11 @@ import (
 
 func Dbconn() (db *sql.DB) {
 
-	server := `MAICK\SQLEXPRESS`
+	server := `yOUR SERVER / LOCALHOST`
 	port := 1433
-	user := "sa"
-	password := "Miprincesa1009"
-	database := "employee"
+	user := "sa" //USER SYSTEM ADMINISTRATOR
+	password := "YOUR PASSWORD"
+	database := "YOUR DATABASE"
 
 	connString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d;database=%s;", server, user, password, port, database)
 
