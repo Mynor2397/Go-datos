@@ -91,3 +91,7 @@ func LoginPage(res http.ResponseWriter, req *http.Request) {
 
 
 }
+
+func message()(string, bool){
+	return "hola mundo", true
+}
